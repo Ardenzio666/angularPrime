@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class MyFirstCompComponent {
 
+  name: string = "";
+  email: string = "";
+  message: string = "";
+  isSubmitted: boolean = false;
+  messages: Array<any> = [];
+
+  onSubmit() {
+    this.isSubmitted = true;
+    this.messages.push({
+      'name': this.name,
+      'email': this.email,
+      'message': this.message
+    })
+    console.log(this.messages);
+  }
+
 }
