@@ -1,9 +1,11 @@
-<div>
-  <div class="message-card">
-    <h3>Details here</h3>
-    <p>detail here</p>
+<div class="message-card">
+  <div class="message-header">
+    <h3>{{ message.name }}</h3>
+    <p>{{ message.email }}</p>
   </div>
   <div class="message-content">
-    <p>Details here</p>
+    <p>{{ message.message }}</p>
   </div>
+  <button type="button"
+  (click)="onDelete()">delete</button>
 </div>
